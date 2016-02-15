@@ -1,0 +1,23 @@
+<div class="row">
+  <% if @vote.new_record? %>
+    <div class="col s12">
+      <h3 class="center-align">Your options for <%= show_date %></h3>
+      <div class="divider">
+
+      </div>
+    </div>
+    <%= form_tag votes_path, method: :post do |form| %>
+    <% @places.in_groups_of(3).each do |place_array| %>
+      <% place_array.each do |place| %>
+        <div class="col s4">
+          <%= render('helpers/card_select', place: place) if place %>
+        </div>
+        <% end %>
+      <% end %>
+      <%= submit_tag 'Vote!', class: 'col s12 button button-block button-rounded button-action button-large' %>
+    <% end %>
+  <% else %>
+    <h4>You already voted. Want to <%= link_to 'delete', vote_path(@vote), method: :delete %> your vote and choose again?</h4>
+    Your choices: <b><%= print_places(@vote) %></b>
+  <% end %>
+</div>

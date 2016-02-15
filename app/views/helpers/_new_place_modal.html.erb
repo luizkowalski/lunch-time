@@ -1,0 +1,20 @@
+<div id="modal_add" class="modal modal_add">
+  <div class="modal-content">
+    <%= form_for Place.new do |f| %>
+      <div class="input-field ">
+        <%= f.text_field :name, required: true %>
+        <%= f.label :name, 'Name' %>
+      </div>
+
+      <div class="input-field">
+        <%= f.text_field :value, required: true, type: :number %>
+        <%= f.label :value, 'will spend around...' %>
+      </div>
+
+      <div class="modal-footer">
+        <%= f.submit 'Save', class: 'modal-action button button-action' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweek::Lunch</title>
+  <%= stylesheet_link_tag  'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <%= render 'helpers/navbar' %>
+  </header>
+<main>
+  <div class="container">
+    <%= yield %>
+  </div>
+</main>
+
+<%= javascript_include_tag 'application' %>
+</body>
+</html>

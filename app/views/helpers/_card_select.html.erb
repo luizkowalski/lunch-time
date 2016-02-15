@@ -1,0 +1,10 @@
+<div class="card blue lighten-5 place">
+  <div class="card-content white-text">
+    <span class="card-title black-text"><%= truncate(place.name, length: 22) %></span>
+    <p class="black-text">You will probably spend around <%= place.value %> EUR</p>
+  </div>
+  <div class="card-action">
+    <%= check_box_tag 'votes[]', place.id, false, id: "vote_#{place.id}", class: 'input-tweek' -%>
+    <lable for='<%= "vote_#{place.id}" %>'>I'm up to!</lable>
+  </div>
+</div>

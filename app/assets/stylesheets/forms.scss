@@ -1,0 +1,31 @@
+//colors
+$color: #ddd;
+
+.input-tweek {
+	label {
+		color: $color;
+	}
+	input[type=text] {
+		&:focus {
+			border-bottom: 1px solid $color;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 0 0 $color;
+			+ label {
+				color: $color;
+			}
+		}
+		&.valid {
+			border-bottom: 1px solid $color;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 0 0 $color;
+		}
+		&.invalid {
+			border-bottom: 1px solid $color;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 0 0 $color;
+		}
+	}
+	.prefix.active {
+		color: $color;
+	}
+}

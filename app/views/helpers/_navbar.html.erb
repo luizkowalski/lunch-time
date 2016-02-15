@@ -1,0 +1,14 @@
+<nav>
+   <div class="nav-wrapper blue">
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <% if cookies[:name] %>
+       <li>
+         <%= link_to 'Post to slack', post_to_slack_path, remote: true %>
+       </li>
+       <li>
+         <%= link_to 'Places', places_path %>
+       </li>
+        <% end %>
+     </ul>
+   </div>
+ </nav>

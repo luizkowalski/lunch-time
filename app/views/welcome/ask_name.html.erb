@@ -1,0 +1,12 @@
+<div class="row center">
+  <div class="col s12">
+    <img src="<%= image_url('tweek-logo.png') %>" />
+  </div>
+  <div class="col s12">
+    <div class="input-field col s6 offset-s3">
+      <%= form_tag welcome_write_name_path, method: :post do %>
+        <input placeholder="And your name is..." id="name" name="name" class="text-name" type="text" >
+      <% end %>
+     </div>
+  </div>
+</div>

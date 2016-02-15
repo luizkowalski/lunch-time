@@ -1,0 +1,24 @@
+$tweek-color: #0064AB;
+
+body {
+  background: image_url('bg.png') repeat;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1{
+  color: $tweek-color;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.place {
+  cursor: pointer;
+}
+
+.brand-logo .tweek-brand {
+  padding-left: 10px;
+}
